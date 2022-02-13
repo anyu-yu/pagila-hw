@@ -6,7 +6,7 @@
  */
 
 SELECT country.country, SUM(payment.amount) AS profit
-FROM country
+FROM country 
 JOIN city ON (country.country_id = city.country_id)
 JOIN address ON (city.city_id = address.city_id)
 JOIN customer ON (address.address_id = customer.address_id)
